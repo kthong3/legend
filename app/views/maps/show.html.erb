@@ -1,0 +1,13 @@
+<div class="map-content">
+  <h1 class="title">
+    <%= @map.title %>
+  </h1>
+
+  <p class="date">
+    Submitted <%= time_ago_in_words(@map.created_at) %> | <%= link_to 'edit', edit_map_path %> | <%= link_to 'delete', map_path(@map), method: :delete, data: { confirm: "Are you sure you want to delete this map?"} %>
+  </p>
+
+  <p class="description">
+    <%= @map.description %>
+  </p>
+</div>
