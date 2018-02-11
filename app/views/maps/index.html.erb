@@ -1,2 +1,4 @@
 <h1>Maps</h1>
-<%= render partial: 'map', collection: @maps %>
+<div class="container">
+  <%= render @maps || "There are no maps yet!" %>
+</div>
