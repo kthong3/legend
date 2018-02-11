@@ -9,6 +9,25 @@
   </head>
 
   <body>
+    <header>
+      <nav>
+        <div class='nav'>
+          <%= link_to 'home', root_path %> | login | signup
+        </div>
+        <div id="sidebar">
+          <ul>
+            <li class="category">Maps</li>
+            <li><%= link_to "home", root_path %></li>
+            <li>about</li>
+            <li></li>
+          </ul>
+          <ul>
+            <li class="category">Contact</li>
+            <li><a href="https://github.com/kthong3">github</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
     <%= yield %>
   </body>
 </html>
