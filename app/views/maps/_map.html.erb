@@ -1,6 +1,10 @@
-<ul>
-  <p>
-    Title: <%= map.title %><br>
-    Description: <%= map.description %>
-  </p>
-</ul>
+<div class="map-wrapper">
+  <ul>
+    <p>
+      Title: <%= link_to map.title, map %><br>
+      Description: <%= map.description %>
+      <br>
+      Created: <%= map.created_at.strftime("%B, %d, %Y") %>
+    </p>
+  </ul>
+</div>
