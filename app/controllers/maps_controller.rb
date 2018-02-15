@@ -26,7 +26,7 @@ class MapsController < ApplicationController
 
   def update
     @map = Map.find(params[:id])
-    if @map.update(params[:map].permit(:title, :description))
+    if @map.update(params[:map].permit(:title, :description, :xuser_id))
       redirect_to @map
     else
       render 'edit'
