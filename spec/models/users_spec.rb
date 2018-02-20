@@ -28,8 +28,20 @@ describe User do
     end
 
 
-    it "is not valid without an email address"
-    it "is not valid without a password"
+    it "is not valid without an email address" do
+      user.first_name = "jon"
+      user.last_name = "snow"
+      user.password = "password"
+      expect(user).to_not be_valid
+    end
+
+    it "is not valid without a password"do
+      user.first_name = "jon"
+      user.last_name = "snow"
+      user.email = "iknownothing@email.com"
+      expect(user).to_not be_valid
+    end
+
   end
 
 end
