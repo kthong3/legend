@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
 Map.destroy_all
+Place.destroy_all
 
 user = User.create({
   first_name: "jon",
@@ -21,3 +22,5 @@ user = User.create({
   user_id: user.id
   })
 end
+
+home = Place.new(full_street_address: "25 Main St, Cooperstown, NY", map_id: Map.first)

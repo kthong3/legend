@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180215044254) do
+ActiveRecord::Schema.define(version: 20180220220822) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,19 @@ ActiveRecord::Schema.define(version: 20180215044254) do
     t.index ["user_id"], name: "index_maps_on_user_id"
   end
 
+  create_table "places", force: :cascade do |t|
+    t.string "full_street_address"
+    t.string "city"
+    t.string "state"
+    t.string "zip_code"
+    t.float "latitude"
+    t.float "longitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "map_id"
+    t.index ["map_id"], name: "index_places_on_map_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -34,4 +47,5 @@ ActiveRecord::Schema.define(version: 20180215044254) do
   end
 
   add_foreign_key "maps", "users"
+  add_foreign_key "places", "maps"
 end
