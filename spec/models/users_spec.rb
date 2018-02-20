@@ -10,16 +10,12 @@ describe User do
     end
 
     it "is not valid without a first name" do
-      user.last_name = "snow"
-      user.email = "iknownothing@email.com"
-      user.password = "password"
+      user.first_name = nil
       expect(user).to_not be_valid
     end
 
     it "is not valid without a last name" do
-      user.first_name = "jon"
-      user.email = "iknownothing@email.com"
-      user.password = "password"
+      user.last_name = nil
       expect(user).to_not be_valid
     end
 
