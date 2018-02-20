@@ -1,14 +1,10 @@
 require 'rails_helper'
 
 describe User do
-  let(:user) { User.new }
+  let(:user) { User.new(first_name: "jon", last_name: "snow", email: "iknownothing@email.com", password: "password")}
 
   describe "validations" do
     it "is valid with valid attributes" do
-      user.first_name = "jon"
-      user.last_name = "snow"
-      user.email = "iknownothing@email.com"
-      user.password = "password"
       user.valid?
       expect(user.errors).to be_empty
     end
