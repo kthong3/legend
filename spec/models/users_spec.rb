@@ -21,16 +21,12 @@ describe User do
 
 
     it "is not valid without an email address" do
-      user.first_name = "jon"
-      user.last_name = "snow"
-      user.password = "password"
+      user.email = nil
       expect(user).to_not be_valid
     end
 
     it "is not valid without a password"do
-      user.first_name = "jon"
-      user.last_name = "snow"
-      user.email = "iknownothing@email.com"
+      user.password = nil
       expect(user).to_not be_valid
     end
 
