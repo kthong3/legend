@@ -3,11 +3,10 @@
     <%= @map.title %>
   </h1>
     <iframe
-      width="300"
-      height="300"
-      frameborder="0"
-      style="border:0" src="https://www.google.com/maps/embed/v1/place?key=#{ENV['API_KEY']}&q=Space+Needle,Seattle+WA"
-      allowfullscreen>
+      width="300" height="300" frameborder="0"
+      style="border:0" src="//www.google.com/maps/embed/v1/place?q=Harrods,Brompton%20Rd,%20UK
+      &zoom=17
+      &key=<%= ENV['API_KEY'] %>" allowfullscreen>
     </iframe>
 
   <p class="date">
