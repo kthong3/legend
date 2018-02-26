@@ -18,6 +18,7 @@ class MapsController < ApplicationController
 
   def show
     @map = Map.find(params[:id])
+    @places = @map.places
   end
 
   def edit
