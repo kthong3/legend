@@ -24,3 +24,5 @@ user = User.create({
 end
 
 home = Place.new(full_street_address: "25 Main St, Cooperstown, NY", map_id: Map.first)
+home.latitude = home.geocode[0]
+home.longitude = home.geocode[1]
